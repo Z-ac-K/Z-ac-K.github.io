@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://Z-ac-K.github.io/sitemap.xml
