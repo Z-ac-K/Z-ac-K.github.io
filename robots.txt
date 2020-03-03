@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://Z-ac-K.github.io/sitemap.xml
+Sitemap: https://rui-sen-ke.github.io/sitemap.xml

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>书本学习 on ǝᴉp</title>
-    <link>https://Z-ac-K.github.io/tags/%E4%B9%A6%E6%9C%AC%E5%AD%A6%E4%B9%A0/</link>
+    <link>https://rui-sen-ke.github.io/tags/%E4%B9%A6%E6%9C%AC%E5%AD%A6%E4%B9%A0/</link>
     <description>Recent content in 书本学习 on ǝᴉp</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 19 Feb 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://Z-ac-K.github.io/tags/%E4%B9%A6%E6%9C%AC%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rui-sen-ke.github.io/tags/%E4%B9%A6%E6%9C%AC%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>《数据结构（C语言版）》学习记录</title>
-      <link>https://Z-ac-K.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</link>
+      <link>https://rui-sen-ke.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</link>
       <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://Z-ac-K.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</guid>
+      <guid>https://rui-sen-ke.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</guid>
       <description>&lt;h2 id=&#34;第一章-绪论&#34;&gt;第一章 绪论&lt;/h2&gt;
 &lt;h3 id=&#34;11什么是数据结构&#34;&gt;1.1	什么是数据结构&lt;/h3&gt;
 &lt;p&gt;　　数据结构是一门研究非数值计算的程序设计问题中计算机的操作对象以及它们之间的关系和操作等的学科。&lt;/p&gt;
