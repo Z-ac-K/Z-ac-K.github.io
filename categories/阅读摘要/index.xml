@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>阅读摘要 on ǝᴉp</title>
+    <link>https://rui-sen-ke.github.io/categories/%E9%98%85%E8%AF%BB%E6%91%98%E8%A6%81/</link>
+    <description>Recent content in 阅读摘要 on ǝᴉp</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 17 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://rui-sen-ke.github.io/categories/%E9%98%85%E8%AF%BB%E6%91%98%E8%A6%81/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>读《Just For Fun —— linus自传》</title>
+      <link>https://rui-sen-ke.github.io/post/justforfun/</link>
+      <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://rui-sen-ke.github.io/post/justforfun/</guid>
+      <description>Linux这个系统不得不说是非常优秀的操作系统，Linux之父Linus也是一位颇具传奇色彩的人物，先前曾看过一些关于他介绍自己办公间1、对</description>
+    </item>
+    
+  </channel>
+</rss>
