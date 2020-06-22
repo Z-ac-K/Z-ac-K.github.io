@@ -76,7 +76,7 @@
 二层主机发现中“二层”指的是链路层，即利用OSI中的链路层协议进行主机发现，一般使用ARP协议。ARP协议在局域网通信中使用，利用MAC地址作为对应识别地址，不经过路由，优点是速度快、数据包不会被过滤掉可靠性高；缺点在于无法扫描经过路由的主机，不能跨子网扫描。">
 <meta itemprop="datePublished" content="2020-02-20T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-02-20T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1026">
+<meta itemprop="wordCount" content="1303">
 
 
 
@@ -333,7 +333,7 @@
             <a href="https://rui-sen-ke.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"> 网络安全学习 </a>
             
           </div>
-        <span class="more-meta"> 1026 words </span>
+        <span class="more-meta"> 1303 words </span>
           <span class="more-meta"> 3 min read </span>
 
         
@@ -356,6 +356,11 @@
         <li><a href="#二层主机发现">二层主机发现</a></li>
         <li><a href="#三层主机发现">三层主机发现</a></li>
         <li><a href="#四层主机发现">四层主机发现</a></li>
+      </ul>
+    </li>
+    <li><a href="#端口扫描">端口扫描</a>
+      <ul>
+        <li><a href="#端口扫描技术">端口扫描技术</a></li>
       </ul>
     </li>
   </ul>
@@ -397,6 +402,16 @@
 <p>使用&quot;hping3 &ndash;udp -c 3 (-p 80 指定端口号，默认为0)ipaddress&quot;进行对应的四层主机发现（所探测主机上的防火墙有可能过滤掉探测发出的UDP包 ，导致loss，所以要结合多层主机来进行探测。）</p>
 <h5 id="python脚本">python脚本</h5>
 <p>各种各样的脚本可以尝试，各自有各自的特点和功能。</p>
+<h2 id="端口扫描">端口扫描</h2>
+<h3 id="端口扫描技术">端口扫描技术</h3>
+<h6 id="端口基本介绍">端口基本介绍</h6>
+<p>端口分类为物理端口和虚拟端口，通过IP地址+端口号来访问服务，要对服务进行测试首先要确定是否开放对应端口号。</p>
+<h6 id="端口扫描工具-nmap">端口扫描工具-Nmap</h6>
+<p>命令“nmap ipaddress (-p)”来扫描对应IP地址开放端口，-p指定端口范围和端口类型</p>
+<h6 id="端口扫描工具-dmitry">端口扫描工具-Dmitry</h6>
+<p>dmitry ipaddress扫描指定IP地址，可以添加-p来指定TCP扫描（更多扫描可选项可以直接dmitry查看）</p>
+<h6 id="端口扫描工具-netcat">端口扫描工具-netcat</h6>
+<p>“-nc -nvz ipaddress xx-xz”，-n不进行DNS解析直接扫描IP地址，-v输出对应的详细信息，-z使用用于扫描的zero-I/O模式，xx-xz指定端口号范围</p>
     </div>
 
     
