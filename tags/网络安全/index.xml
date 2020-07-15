@@ -12,15 +12,12 @@
     
     
     <item>
-      <title>网络安全训练营学习笔记</title>
+      <title>网络安全训练营学习笔记”</title>
       <link>https://rui-sen-ke.github.io/post/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%AD%E7%BB%83%E8%90%A5%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://rui-sen-ke.github.io/post/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AE%AD%E7%BB%83%E8%90%A5%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
-      <description>&lt;h2 id=&#34;主机探测&#34;&gt;主机探测&lt;/h2&gt;
-&lt;h3 id=&#34;二层主机发现&#34;&gt;二层主机发现&lt;/h3&gt;
-&lt;h6 id=&#34;优缺点&#34;&gt;优缺点&lt;/h6&gt;
-&lt;p&gt;二层主机发现中“二层”指的是链路层，即利用OSI中的链路层协议进行主机发现，一般使用ARP协议。ARP协议在&lt;strong&gt;局域网&lt;/strong&gt;通信中使用，利用MAC地址作为对应识别地址，不经过路由，优点是速度快、数据包不会被过滤掉可靠性高；缺点在于无法扫描经过路由的主机，不能跨子网扫描。&lt;/p&gt;</description>
+      <description>Linux常用操作 查询：ls [-a] [-l] [-h]，-a=all -l=long -h=size，ls -alh详细显示下文件权限rwx三位为一组，分三组对应当前用户、</description>
     </item>
     
   </channel>

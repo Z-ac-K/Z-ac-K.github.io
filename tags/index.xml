@@ -6,9 +6,37 @@
     <description>Recent content in Tags on ǝᴉp</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Thu, 20 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rui-sen-ke.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>kali</title>
+      <link>https://rui-sen-ke.github.io/tags/kali/</link>
+      <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://rui-sen-ke.github.io/tags/kali/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>工具学习</title>
+      <link>https://rui-sen-ke.github.io/tags/%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://rui-sen-ke.github.io/tags/%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>网络安全</title>
+      <link>https://rui-sen-ke.github.io/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</link>
+      <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://rui-sen-ke.github.io/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
