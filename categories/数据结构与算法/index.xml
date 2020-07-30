@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据结构与算法 on ǝᴉp</title>
+    <link>https://rui-sen-ke.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</link>
+    <description>Recent content in 数据结构与算法 on ǝᴉp</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 20 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://rui-sen-ke.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>算法一些知识点例题</title>
+      <link>https://rui-sen-ke.github.io/post/%E7%AE%97%E6%B3%95%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9%E4%BE%8B%E9%A2%98/</link>
+      <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rui-sen-ke.github.io/post/%E7%AE%97%E6%B3%95%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9%E4%BE%8B%E9%A2%98/</guid>
+      <description>&lt;h3 id=&#34;最短hamilton路径&#34;&gt;最短Hamilton路径&lt;/h3&gt;
+&lt;p&gt;给定一张 &lt;strong&gt;n&lt;/strong&gt; 个点的带权无向图，点从 0~n-1 标号，求起点 0 到终点 n-1 的最短Hamilton路径。 Hamilton路径的定义是从 0 到 n-1 不重不漏地经过每个点恰好一次。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
