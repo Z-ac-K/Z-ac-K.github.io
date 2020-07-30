@@ -367,7 +367,7 @@
 <h4 id="网络攻击的概述">网络攻击的概述</h4>
 <p>黑客定义：①研究计算机程序并以此增长自身技巧的人②对编程有无穷兴趣和热忱的人③能快速编程的人④某专门系统的专家⑤恶意闯入他人计算机或系统，意图盗取敏感信息的人（cracker）</p>
 <p>入侵流程：</p>
-<p><img src="http://ww1.sinaimg.cn/large/0060YsGBgy1gc7jjxui30j30cb06daco.jpg" alt=""><img src="http://ww1.sinaimg.cn/large/0060YsGBgy1gc7jpm6rw6j30es03kt9v.jpg" alt=""></p>
+<p><img src="https://i.loli.net/2020/07/30/KvqX5HuBsxhrVyz.jpg" alt=""><img src="https://i.loli.net/2020/07/30/mHFv5gTCXRS6IKZ.jpg" alt=""></p>
 <p>网络攻击：指针对计算机信息系统、基础设施、计算机网络或个人计算机设备的任何的进攻动作；包括在计算机和计算机网络中破坏、揭露、修改、使软件或服务失去功能、在没有得到授权的情况下偷取或访问任何一计算机的数据。分为远程攻击、本地攻击、伪远程攻击。</p>
 <h3 id="12-实训项目-安装kali-linux">1.2 实训项目 安装Kali Linux</h3>
 <p><del>这个我会</del></p>
@@ -390,11 +390,11 @@
 <p>TCP报文标志位：ACK：确认标志　RST：复位标志　URG：紧急标志　SYN：同步标志　FIN：终止标志（三次握手建立，四次挥手释放）</p>
 <p>端口扫描种类：</p>
 <p>①全连接扫描：完成全部的三次握手建立连接过程，端口未开放目标主机会返回RST标识</p>
-<p><img src="http://ww1.sinaimg.cn/large/0060YsGBgy1gc7lrp8r6nj307t0320t7.jpg" alt="1.png">
-<img src="http://ww1.sinaimg.cn/large/0060YsGBgy1gc7lru0c2ij307t031gm0.jpg" alt="2.png"></p>
+<p><img src="https://i.loli.net/2020/07/30/X3a5kxEdUtcAVyR.jpg" alt="1.png">
+<img src="https://i.loli.net/2020/07/30/8wTneBGShlXNdxM.jpg" alt="2.png"></p>
 <p>②半连接扫描：端口开放在请求连接中主机会返回SYN/ACK标识的数据包（请求方发送RST不继续建立连接），<strong>半连接扫描的缺点是需要攻击者拥有客户机的root权限，可以被防火墙检测和过滤</strong>。</p>
 <p>③隐蔽扫描：FIN扫描，发送FIN，目标主机相应端口关闭丢弃数据包并返回RST数据包，端口开放则不做任何反应。</p>
-<p><img src="http://ww1.sinaimg.cn/large/0060YsGBgy1gc7m32d8zlj307t0320t1.jpg" alt="3.png"></p>
+<p><img src="https://i.loli.net/2020/07/30/7z4DCT6ukGy2IFM.jpg" alt="3.png"></p>
 <p>④空扫描：FIN扫描的变种，将TCP数据包的所有标志位都置空，以此来绕过目标主机上一般的防火墙或RDS。Windows不管端口是否开放，接收到这个不合法的数据包都会返回一个RST数据包，Linux则严格遵循返回标准端口开放就不返回RST数据包</p>
 <p>Xmas-Tree圣诞树扫描：将TCP中的URG、PSH、FIN位都置1，不同操作系统有不同的反应。</p>
 <p>分段扫描：将探测用的数据包分成多个较小的IP段，从而绕过防火墙的包过滤器。</p>
@@ -403,9 +403,9 @@
 <h3 id="25-操作系统识别">2.5 操作系统识别</h3>
 <p>操作系统指纹：各个操作系统厂商在实现TCP/IP协议栈时，或保留的一些自己特色的独特痕迹，能够用来辨识操作系统。</p>
 <p>①主动指纹识别：主动往目标主机发送数据包，并对响应数据进行分析，最典型的分析方法是TTL分析（Ping方式）；或者是nmap探测：namp命令中增加-O参数</p>
-<p><img src="http://ww1.sinaimg.cn/large/0060YsGBgy1gc7nngalt6j30650563ys.jpg" alt="4.png"><img src="http://ww1.sinaimg.cn/large/0060YsGBgy1gc7nqv3w0pj306r04x751.jpg" alt="5.png"></p>
+<p><img src="https://i.loli.net/2020/07/30/P69zO2UWHC4jAT7.jpg" alt="4.png"><img src="https://i.loli.net/2020/07/30/wa1Ps3h5NyoeYru.jpg" alt="5.png"></p>
 <p>②被动指纹识别：本地主机不主动发送数据包，只是被动地捕获远程主机返回地包来分析其OS类型版本（指纹识别工具通常被当成了嗅探工具），通用性更强但准确性更低。</p>
-<p><img src="http://ww1.sinaimg.cn/large/0060YsGBgy1gc7nvglj5xj306q03e74r.jpg" alt="6.png"></p>
+<p><img src="https://i.loli.net/2020/07/30/SJOtEw3lbu9UF8g.jpg" alt="6.png"></p>
 <p>③Banner识别技术：通过主机提供的各种服务进行分析。</p>
 <p>④人工识别</p>
     </div>
@@ -482,6 +482,31 @@
   
 
   
+  
+
+  
+
+  
+  
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "rui-sen-ke/comments_for_blog"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+  
+
+  
+
+  
+
+  
+
+    
+
   
 
         </div>
