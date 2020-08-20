@@ -69,7 +69,7 @@
 <meta itemprop="description" content="列表 列表简介 一组按特定顺序排列的元素，用方括号[]来标识，逗号分隔其中元素。 访问： 使用索引访问列表元素，请求获取列表元素时只返回该元素不包括">
 <meta itemprop="datePublished" content="2020-08-20T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-08-20T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="2400">
+<meta itemprop="wordCount" content="2399">
 
 
 
@@ -323,7 +323,7 @@
             <a href="https://rui-sen-ke.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"> 编程语言 </a>
             
           </div>
-        <span class="more-meta"> 2400 words </span>
+        <span class="more-meta"> 2399 words </span>
           <span class="more-meta"> 5 min read </span>
 
         
@@ -360,7 +360,7 @@
 <h3 id="列表简介">列表简介</h3>
 <p>一组按特定顺序排列的元素，用方括号[]来标识，逗号分隔其中元素。</p>
 <h4 id="访问">访问：</h4>
-<p>使用索引访问列表元素，请求获取列表元素时只返回该元素不包括方括号和引号，用title()方法可让格式更规整[^1]。</p>
+<p>使用索引访问列表元素，请求获取列表元素时只返回该元素不包括方括号和引号，用title()方法可让格式更规整。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -375,7 +375,9 @@
 <span class="k">print</span><span class="p">(</span><span class="n">motorcycles</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="p">)</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>['honda','yamaha','suzuki']</code><br><code>honda</code><br><code>Honda</code></p>
+</div><hr>
+<p><code>['honda','yamaha','suzuki']</code><br><code>honda</code><br><code>Honda</code></p>
+<hr>
 <p>列表与其他语言中的数组类似，索引从0开始，但是为最后一个列表元素提供了一种特殊语法：通过将索引指定为-1，可返回到最后一个列表元素。这种约定适用于其他负数索引，例如索引-2返回倒数第二个列表元素，索引-3返回倒数第三个列表元素。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -385,7 +387,9 @@
 <pre class="chroma"><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="n">motorcycles</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>suzuki</code></p>
+</div><hr>
+<p><code>suzuki</code></p>
+<hr>
 <h4 id="修改">修改：</h4>
 <p>列表一般来说都是动态的，可以进行增删改查。</p>
 <p>通过指定列表名和元素索引，赋予新值来对列表元素进行修改。</p>
@@ -399,7 +403,9 @@
 <span class="k">print</span><span class="p">(</span><span class="n">motorcycles</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>['ducati','yamaha','suzuki']</code></p>
+</div><hr>
+<p><code>['ducati','yamaha','suzuki']</code></p>
+<hr>
 <p>使用append()方法在指定列表末尾添加新元素。实际中可先创建空列表再使用一系列append()语句添加元素。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -411,7 +417,9 @@
 <span class="k">print</span><span class="p">(</span><span class="n">motorcycles</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>['ducati','yamaha','suzuki','honda']</code></p>
+</div><hr>
+<p><code>['ducati','yamaha','suzuki','honda']</code></p>
+<hr>
 <p>使用insert()方法指定在列表的任何位置添加新元素。这种操作将列表中既有的索引号即以后的元素都右移一个位置。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -423,7 +431,9 @@
 <span class="k">print</span><span class="p">(</span><span class="n">motorcycles</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>['sanya,''ducati','yamaha','suzuki','honda']</code></p>
+</div><hr>
+<p><code>['sanya,''ducati','yamaha','suzuki','honda']</code></p>
+<hr>
 <p>使用del语句对列表中已知位置的元素进行删除。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -435,7 +445,9 @@
 <span class="k">print</span><span class="p">(</span><span class="n">motorcycles</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>['ducati','yamaha','suzuki','honda']</code></p>
+</div><hr>
+<p><code>['ducati','yamaha','suzuki','honda']</code></p>
+<hr>
 <p>也可使用pop()方法将元素从列表中删除并接着使用它的值。pop()方法中未指定索引的情况下默认删除列表末尾元素。指定索引的情况下pop()可以删除列表中任何位置的元素。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -455,7 +467,10 @@
 <span class="k">print</span><span class="p">(</span><span class="n">popped_motorcycles</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>['ducati','yamaha','suzuki']</code><br><code>honda</code><br><code>['yamaha','suzuki']</code><br><code>ducati</code></p>
+</div><p>`</p>
+<hr>
+<p><code>['ducati','yamaha','suzuki']</code><br><code>honda</code><br><code>['yamaha','suzuki']</code><br><code>ducati</code></p>
+<hr>
 <p>使用remove()方法可根据指定值删除列表元素。remove()方法只删除第一个指定的值，如果要删除的值可能在列表中出现多次就需要用循环来判断是否删除了所有值。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -467,7 +482,9 @@
 <span class="k">print</span><span class="p">(</span><span class="n">motorcycles</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>['suzuki']</code></p>
+</div><hr>
+<p><code>['suzuki']</code></p>
+<hr>
 <h4 id="组织">组织：</h4>
 <p>使用sort()方法可对列表进行<strong>永久性排序</strong>。下例让列表元素按字母排序，若要按与字母顺序相反的顺序排序只需向sort()方法传递参数reverse=True</p>
 <div class="highlight"><div class="chroma">
@@ -486,7 +503,10 @@
 <span class="k">print</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>['audi','bmw','subaru','toyota']</code><br><code>['toyota','subaru','bmw','audi']</code></p>
+</div><p>`</p>
+<hr>
+<p><code>['audi','bmw','subaru','toyota']</code><br><code>['toyota','subaru','bmw','audi']</code></p>
+<hr>
 <p>使用sorted()函数可对列表进行<strong>临时排序</strong>，保留列表元素原排列顺序，按照特定顺序显示。要按与字母顺序相反的顺序显示列表，也可向该函数传递参数reverse=True。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -500,7 +520,10 @@
 <span class="k">print</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>['toyota','subaru','bmw','audi']</code><br><code>['audi','bmw','subaru','toyota']</code><br><code>['toyota','subaru','bmw','audi']</code></p>
+</div><p>`</p>
+<hr>
+<p><code>['toyota','subaru','bmw','audi']</code><br><code>['audi','bmw','subaru','toyota']</code><br><code>['toyota','subaru','bmw','audi']</code></p>
+<hr>
 <p><em>在普通情况下，并非所有值都是小写的，按字母顺序排列列表要复杂一些，决定排序顺序时有多种解读大写字母的方式，要指定准确的排列顺序。这里只是简单的举例这两种方法。</em></p>
 <p>使用reverse()方法反转列表元素排列顺序，这个操作是永久性修改但要复原再次reverse就可以了。</p>
 <div class="highlight"><div class="chroma">
@@ -513,7 +536,9 @@
 <span class="k">print</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>['audi','bmw','subaru','toyota']</code></p>
+</div><hr>
+<p><code>['audi','bmw','subaru','toyota']</code></p>
+<hr>
 <p>使用函数len()快速获取列表长度。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -523,7 +548,9 @@
 <pre class="chroma"><code class="language-python" data-lang="python"><span class="nb">len</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>4</code></p>
+</div><hr>
+<p><code>4</code></p>
+<hr>
 <h3 id="操作列表">操作列表</h3>
 <h4 id="遍历">遍历：</h4>
 <p>使用for循环可遍历整个列表，其中按顺序获取列表magicians中的值并存储到变量magican中，然后依次执行循环体中的语句（python根据缩进来判断代码行与前一个代码行的关系），直到列表元素循环读尽，该变量可指定任何名称。</p>
@@ -539,7 +566,9 @@
     <span class="k">print</span><span class="p">(</span><span class="n">magican</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>alice</code><br><code>david</code><br><code>carolina</code></p>
+</div><hr>
+<p><code>alice</code><br><code>david</code><br><code>carolina</code></p>
+<hr>
 <h4 id="创建">创建：</h4>
 <p>使用range()函数可以轻松生成一系列数字。函数range()从指定的第一个值开始，并在到达指定的第二个值后就停止不进入循环语句，故不包括第二个值。</p>
 <div class="highlight"><div class="chroma">
@@ -552,7 +581,9 @@
 	<span class="k">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>1</code><br><code>2</code><br><code>3</code><br><code>4</code></p>
+</div><hr>
+<p><code>1</code><br><code>2</code><br><code>3</code><br><code>4</code></p>
+<hr>
 <p>range()函数也可通过作为list()的参数来创建数字列表</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -564,7 +595,9 @@
 <span class="k">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>[1,2,3,4,5]</code></p>
+</div><hr>
+<p><code>[1,2,3,4,5]</code></p>
+<hr>
 <p>此外还可指定range()函数的步长</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -576,7 +609,9 @@
 <span class="k">print</span><span class="p">(</span><span class="n">even_numbers</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>[2,4,6,8,10]</code></p>
+</div><hr>
+<p><code>[2,4,6,8,10]</code></p>
+<hr>
 <p>range()函数几乎能够创建任何需要的数字集，例如：创建一个列表其中包含前10个整数的平方（python中**表示乘方运算）</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -592,7 +627,9 @@
 <span class="k">print</span><span class="p">(</span><span class="n">squares</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>[1,4,9,16,25,36,49,64,81,100]</code></p>
+</div><hr>
+<p><code>[1,4,9,16,25,36,49,64,81,100]</code></p>
+<hr>
 <p>此外，还有几个专门用于处理数字列表的python函数：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -608,7 +645,9 @@
 <span class="k">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">digits</span><span class="p">)</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>0</code><br><code>9</code><br><code>45</code></p>
+</div><hr>
+<p><code>0</code><br><code>9</code><br><code>45</code></p>
+<hr>
 <p>Python中<strong>列表解析</strong>将for循环和创建新元素的代码合并成一行并自动附加新元素，下面使用列表解析创建列表squares。列表解析中先要指定一个描述性的列表名，然后指定一个左方括号并定义一个表达式用于生成要存储到列表中的值，接下来，写一个for循环用于给表达式提供值（这里for语句末尾不要冒号），补全右括号。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -620,7 +659,9 @@
 <span class="k">print</span><span class="p">(</span><span class="n">squares</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>[1,4,9,16,25,36,49,64,81,100]`</p>
+</div><hr>
+<p><code>[1,4,9,16,25,36,49,64,81,100]</code></p>
+<hr>
 <h3 id="切片">切片：</h3>
 <h4 id="创建-1">创建：</h4>
 <p>Python中列表的部分元素称为切片，要创建切片可指定要使用的第一个元素和最后一个元素索引，与range()函数类似。</p>
@@ -634,7 +675,9 @@
 <span class="k">print</span><span class="p">(</span><span class="n">players</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>['ame','maybe','charles']</code></p>
+</div><hr>
+<p><code>['ame','maybe','charles']</code></p>
+<hr>
 <p>若没有指定起始索引或终止索引，将自动从列表开头开始提取到终止索引，或从指定起始索引提取到列表末尾。也可通过负数索引输出列表末尾的任何切片。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -648,7 +691,9 @@
 <span class="k">print</span><span class="p">(</span><span class="n">players</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:</span><span class="p">]</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>['ame','maybe','charles','fy']</code><br><code>['charles','fy','xnova']</code><br><code>['charles','fy','xnova']</code></p>
+</div><hr>
+<p><code>['ame','maybe','charles','fy']</code><br><code>['charles','fy','xnova']</code><br><code>['charles','fy','xnova']</code></p>
+<hr>
 <h4 id="遍历-1">遍历：</h4>
 <p>可在for循环中使用切片对列表部分元素进行遍历</p>
 <div class="highlight"><div class="chroma">
@@ -661,7 +706,9 @@
     <span class="k">print</span><span class="p">(</span><span class="n">player</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="p">)</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>['ame','maybe','charles']</code></p>
+</div><hr>
+<p><code>['ame','maybe','charles']</code></p>
+<hr>
 <h4 id="复制列表">复制列表：</h4>
 <p>通过既有列表创建全新列表，可创建一个包含整个列表的切片（省略起始索引和终止索引即可）</p>
 <div class="highlight"><div class="chroma">
@@ -680,7 +727,9 @@
 <span class="k">print</span><span class="p">(</span><span class="n">new</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>['ame','maybe','charles','fy','xnova']</code><br><code>['ame','x','charles','xx','xnova']</code></p>
+</div><hr>
+<p><code>['ame','maybe','charles','fy','xnova']</code><br><code>['ame','x','charles','xx','xnova']</code></p>
+<hr>
 <p>不可以直接简单地将旧列表赋给新列表（new = players ✖ ），这样做实际上是让新变量new关联到包含在players中的列表，因此这两个变量都指向同一个列表，而不是复制出另一个全新的列表。</p>
 <h3 id="元组">元组</h3>
 <p>列表适合用于存储在程序运行期间可能发生变化的数据集，可以进行修改。而存储一系列不可修改的元素时，这种不可变的列表被称为元组。</p>
@@ -696,7 +745,9 @@
 <span class="k">print</span><span class="p">(</span><span class="n">dimensions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>200</code></p>
+</div><hr>
+<p><code>200</code></p>
+<hr>
 <p>上面将一个大小不变的矩形长和宽存储在定义的元组中，当代码出现试图修改元组的操作时，会返回类型错误消息。</p>
 <h4 id="遍历-2">遍历：</h4>
 <p>与列表类似，使用for循环遍历</p>
@@ -712,7 +763,9 @@
 	<span class="k">print</span><span class="p">(</span><span class="n">dimension</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>200</code><br><code>50</code></p>
+</div><hr>
+<p><code>200</code><br><code>50</code></p>
+<hr>
 <h4 id="修改元组变量">修改元组变量：</h4>
 <p>虽然不能修改元组元素，但可以给存储元组的变 量赋值。即重新定义整个元组。</p>
 <div class="highlight"><div class="chroma">
@@ -733,7 +786,9 @@
 	<span class="k">print</span><span class="p">(</span><span class="n">dimension</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>200</code><br><code>50 </code><br><code>400</code><br><code>100</code></p>
+</div><hr>
+<p><code>200</code><br><code>50 </code><br><code>400</code><br><code>100</code></p>
+<hr>
 <h4 id="代码格式">代码格式：</h4>
 <p><a href="https://python.org/dev/peps/pep-0008/">PEP 8</a> 建议每级缩进都使用四个空格，在程序中混合使用制表符和空格可能导致意外的问题，大多数编辑器中都提供了将制表符转换为空格的功能。</p>
 <p>建议行长不超过80字符，这样可以在屏幕上打开多个文件时能同时看到哥哥文件的完整行。此外，<a href="https://python.org/dev/peps/pep-0008/">PEP 8</a> 还建议注释的行长都不超过72字符，因为有些工具为大型项目自动生成文档时会在每行注释开头添加格式化字符。</p>
