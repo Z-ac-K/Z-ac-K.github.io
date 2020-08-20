@@ -6,10 +6,28 @@
     <description>Recent content in Tags on ǝᴉp</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 30 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rui-sen-ke.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Python</title>
+      <link>https://rui-sen-ke.github.io/tags/python/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://rui-sen-ke.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>高级语言</title>
+      <link>https://rui-sen-ke.github.io/tags/%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://rui-sen-ke.github.io/tags/%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>数值策划</title>
