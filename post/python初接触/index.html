@@ -69,7 +69,7 @@
 <meta itemprop="description" content="列表 列表简介 一组按特定顺序排列的元素，用方括号[]来标识，逗号分隔其中元素。 访问： 使用索引访问列表元素，请求获取列表元素时只返回该元素不包括">
 <meta itemprop="datePublished" content="2020-08-20T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-08-20T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="2396">
+<meta itemprop="wordCount" content="3207">
 
 
 
@@ -142,7 +142,7 @@
         
           
           
-            <a class="menu-item-link" href="https://rui-sen-ke.github.io/about/">Hopes</a>
+            <a class="menu-item-link" href="https://rui-sen-ke.github.io/about/">Wish_list</a>
           
         
       </li>
@@ -289,7 +289,7 @@
         
           
           
-            <a class="menu-item-link" href="https://rui-sen-ke.github.io/about/">Hopes</a>
+            <a class="menu-item-link" href="https://rui-sen-ke.github.io/about/">Wish_list</a>
           
 
         
@@ -323,8 +323,8 @@
             <a href="https://rui-sen-ke.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"> 编程语言 </a>
             
           </div>
-        <span class="more-meta"> 2396 words </span>
-          <span class="more-meta"> 5 min read </span>
+        <span class="more-meta"> 3207 words </span>
+          <span class="more-meta"> 7 min read </span>
 
         
         
@@ -347,6 +347,12 @@
         <li><a href="#操作列表">操作列表</a></li>
         <li><a href="#切片">切片：</a></li>
         <li><a href="#元组">元组</a></li>
+      </ul>
+    </li>
+    <li><a href="#条件判定">条件判定</a>
+      <ul>
+        <li><a href="#条件测试">条件测试</a></li>
+        <li><a href="#if语句">if语句</a></li>
       </ul>
     </li>
   </ul>
@@ -790,6 +796,108 @@
 <p><a href="https://python.org/dev/peps/pep-0008/">PEP 8</a> 建议每级缩进都使用四个空格，在程序中混合使用制表符和空格可能导致意外的问题，大多数编辑器中都提供了将制表符转换为空格的功能。</p>
 <p>建议行长不超过80字符，这样可以在屏幕上打开多个文件时能同时看到哥哥文件的完整行。此外，<a href="https://python.org/dev/peps/pep-0008/">PEP 8</a> 还建议注释的行长都不超过72字符，因为有些工具为大型项目自动生成文档时会在每行注释开头添加格式化字符。</p>
 <p>要将程序的不通过部分分开，可使用空行来组织程序文件，但也不能滥用。空行不会影响代码运行，但会影响代码的可读性。Python解释器根据水平缩进情况来解读代码，但不关心垂直间距。</p>
+<h2 id="条件判定">条件判定</h2>
+<h3 id="条件测试">条件测试</h3>
+<p>每条if语句的核心都是一个值为True或False的表达式，这种表达式被称为条件测试。Python根据条件测试的值为True还是False来决定是否执行条件语句中的代码。</p>
+<h4 id="检查相等">检查相等</h4>
+<p>大多数条件测试都将一个变量的当前值同特定值进行比较。</p>
+<hr>
+<p><code>&gt;&gt;&gt; car = 'bmw'</code><br><code>&gt;&gt;&gt; car == 'bmw'</code><br><code>True</code></p>
+<hr>
+<p>和其他语言类似，检查相等时用 == ，检查不等时用 != ，Python中检查是否相等时区分大小写，若要不区分大小写的测试可以采用下例方法，这样比较不会影响原来的变量。</p>
+<hr>
+<p><code>&gt;&gt;&gt; car = 'Audi'</code><br><code>&gt;&gt;&gt; car.lower() == 'audi'</code><br><code>True</code><br><code>&gt;&gt;&gt; car</code><br><code>'Audi'</code></p>
+<hr>
+<p>若要同时检查多个条件，可使用关键字 and 和 or 。</p>
+<hr>
+<p><code>&gt;&gt;&gt; age_0 = 22</code><br><code>&gt;&gt;&gt; age_1 = 18</code><br><code>&gt;&gt;&gt; age_0 &gt;= 21 or age_1 &gt;= 21</code><br><code>True</code><br><code>&gt;&gt;&gt; age_0 &gt;= 21 and age_1 &gt;= 21</code><br><code>False</code><br></p>
+<hr>
+<p>要检查特定值是否包含在列表中时，可使用关键字 in （不在使用 not in ）。</p>
+<hr>
+<p><code>&gt;&gt;&gt; requested_toppings = ['mushrooms','onions','pineapple']</code><br><code>&gt;&gt;&gt; 'mushrooms' in requested_toppings</code><br><code>True</code><br><code>&gt;&gt;&gt; 'pepperoni' in requested_toppings</code><br><code>False</code><br></p>
+<hr>
+<h3 id="if语句">if语句</h3>
+<h4 id="if-语句与变体">if 语句与变体</h4>
+<p>if语句中可包含任何条件测试，而后面的缩进代码块中可执行任何操作，条件测试的结果决定了执行或忽略该代码块。</p>
+<p>if-else中else语句能指定条件测试未通过时要执行的操作。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">age</span> <span class="o">=</span> <span class="mi">22</span>
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;</span><span class="o">=</span> <span class="mi">18</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">You are old enough to vote!</span><span class="s2">&#34;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">Have you registered to vote yet?</span><span class="s2">&#34;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">Sorry, youare too young to vote.</span><span class="s2">&#34;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">Please register to vote as soon as you turn 18!</span><span class="s2">&#34;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<p><code>&gt;&gt;&gt; You are old enough to vote!</code><br><code>&gt;&gt;&gt; Have you registered to vote yet?</code><br></p>
+<hr>
+<p>当需要检查超过两个的情况时，可使用 if-elif-else 结构。依次检查每个条件测试，直到遇到通过了的条件测试。测试通过后执行紧跟其后的缩进代码块并跳过余下的测试（这适用于只想执行一个代码块的情况，想要运行多个代码块就要使用一系列独立的 if 语句）。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">age</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="n">price</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">elif</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>
+    <span class="n">price</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">price</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">Your admission cost is $</span><span class="s2">&#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">price</span><span class="p">)</span> <span class="o">+</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">.</span><span class="s2">&#34;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>上述代码中最后的 <code>else</code> 可修改为 <code>elif age &gt;= 18</code> 这样更为清晰，因为 else 是一条包罗万象的语句，只要不满足前面所有的条件测试就会执行自己的缩进代码块，这可能会引入无效甚至恶意的数据。</p>
+<h4 id="用-if-语句处理列表">用 if 语句处理列表</h4>
+<p>利用 for 循环结合 if 语句可检查列表中的特殊值并作出合适的处理。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">requested_toppings</span> <span class="o">=</span> <span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">mushrooms</span><span class="s1">&#39;</span><span class="p">,</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">green peppers</span><span class="s1">&#39;</span><span class="p">,</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">extra cheese</span><span class="s1">&#39;</span><span class="p">]</span>
+<span class="k">if</span> <span class="n">requested_toppings</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">requested_topping</span> <span class="ow">in</span> <span class="n">requested_toppings</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">requested_topping</span> <span class="o">==</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">green peppers</span><span class="s1">&#39;</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">Sorry, we are out of green peppers right now.</span><span class="s2">&#34;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">Adding </span><span class="s2">&#34;</span> <span class="o">+</span> <span class="n">requested_topping</span> <span class="o">+</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">.</span><span class="s2">&#34;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">Finished making your pizza!</span><span class="s2">&#34;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">Sorry, we only have plain pizzas</span><span class="s2">&#34;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<p><code>&gt;&gt;&gt; Adding mushrooms.</code><br><code>&gt;&gt;&gt; Sorry, we are out of green peppers right now.</code><br><code>Adding extra cheese.</code><br><code>&gt;&gt;&gt; Finished making your pizza!</code><br></p>
+<hr>
 
     </div>
 
@@ -956,6 +1064,8 @@
 
   <span class="copyright-year">
     &copy;
+    
+      2019 -
     2020
     <span class="heart">
       
