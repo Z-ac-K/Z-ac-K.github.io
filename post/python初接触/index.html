@@ -69,7 +69,7 @@
 <meta itemprop="description" content="列表 列表简介 一组按特定顺序排列的元素，用方括号[]来标识，逗号分隔其中元素。 访问： 使用索引访问列表元素，请求获取列表元素时只返回该元素不包括">
 <meta itemprop="datePublished" content="2020-08-20T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-08-20T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="3207">
+<meta itemprop="wordCount" content="5150">
 
 
 
@@ -323,8 +323,8 @@
             <a href="https://rui-sen-ke.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"> 编程语言 </a>
             
           </div>
-        <span class="more-meta"> 3207 words </span>
-          <span class="more-meta"> 7 min read </span>
+        <span class="more-meta"> 5150 words </span>
+          <span class="more-meta"> 11 min read </span>
 
         
         
@@ -353,6 +353,14 @@
       <ul>
         <li><a href="#条件测试">条件测试</a></li>
         <li><a href="#if语句">if语句</a></li>
+      </ul>
+    </li>
+    <li><a href="#字典">字典</a>
+      <ul>
+        <li><a href="#简单示例">简单示例</a></li>
+        <li><a href="#简单使用">简单使用</a></li>
+        <li><a href="#遍历字典">遍历字典</a></li>
+        <li><a href="#嵌套">嵌套</a></li>
       </ul>
     </li>
   </ul>
@@ -884,7 +892,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-python" data-lang="python"><span class="n">requested_toppings</span> <span class="o">=</span> <span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">mushrooms</span><span class="s1">&#39;</span><span class="p">,</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">green peppers</span><span class="s1">&#39;</span><span class="p">,</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">extra cheese</span><span class="s1">&#39;</span><span class="p">]</span>
-<span class="k">if</span> <span class="n">requested_toppings</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">requested_toppings</span><span class="p">:</span>       <span class="o">/</span><span class="o">/</span><span class="err">先</span><span class="err">行</span><span class="err">判</span><span class="err">断</span><span class="err">列</span><span class="err">表</span><span class="err">是</span><span class="err">否</span><span class="err">为</span><span class="err">空</span>
     <span class="k">for</span> <span class="n">requested_topping</span> <span class="ow">in</span> <span class="n">requested_toppings</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">requested_topping</span> <span class="o">==</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">green peppers</span><span class="s1">&#39;</span><span class="p">:</span>
             <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">Sorry, we are out of green peppers right now.</span><span class="s2">&#34;</span><span class="p">)</span>
@@ -897,6 +905,365 @@
 </div>
 </div><hr>
 <p><code>&gt;&gt;&gt; Adding mushrooms.</code><br><code>&gt;&gt;&gt; Sorry, we are out of green peppers right now.</code><br><code>Adding extra cheese.</code><br><code>&gt;&gt;&gt; Finished making your pizza!</code><br></p>
+<hr>
+<h2 id="字典">字典</h2>
+<h3 id="简单示例">简单示例</h3>
+<p>Python中字典可存储不受限制的信息量，能高效地模拟现实世界中的情形，下面是一个字典的简单示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">alien</span> <span class="o">=</span> <span class="p">{</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">color</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">green</span><span class="s1">&#39;</span><span class="p">,</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">points</span><span class="s1">&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">}</span>
+<span class="k">print</span><span class="p">(</span><span class="n">alien</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">color</span><span class="s1">&#39;</span><span class="p">]</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">alien</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">points</span><span class="s1">&#39;</span><span class="p">]</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<p><code>green</code><br><code>5</code></p>
+<hr>
+<h3 id="简单使用">简单使用</h3>
+<p>Python中字典是一系列的 <strong>键</strong>-<strong>值</strong> 对，每个键都与一个值相关联，可以通过键来访问与之相关联的值，这个值可以是数字、字符串、列表乃至字典，python中可将任何python对象用作字典中的值。</p>
+<p>在指定键时，python将返回与之相关联的值。键和值之间用冒号分隔，而 键-值 对之间之间用逗号分隔。一个字典中可以存储任意个 键-值 对。</p>
+<h4 id="访问字典">访问字典</h4>
+<p>要获取与键相关联的值，可依次指定字典名和放在方括号内的值</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">alien</span> <span class="o">=</span> <span class="p">{</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">color</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">green</span><span class="s1">&#39;</span><span class="p">,</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">points</span><span class="s1">&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">}</span>
+<span class="n">new_points</span> <span class="o">=</span> <span class="n">alien</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">points</span><span class="s1">&#39;</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">You just earned </span><span class="s2">&#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">new_points</span><span class="p">)</span> <span class="o">+</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2"> points!</span><span class="s2">&#34;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<p><code>You just earned 5 points!</code></p>
+<hr>
+<h4 id="添加键-值对">添加键-值对</h4>
+<p>字典作为一种动态结构，可随时在其中添加键-值对，依次指定字典名、用方括号括起的键和相关联的值。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">alien</span> <span class="o">=</span> <span class="p">{</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">color</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">green</span><span class="s1">&#39;</span><span class="p">,</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">points</span><span class="s1">&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">}</span>
+<span class="k">print</span><span class="p">(</span><span class="n">alien</span><span class="p">)</span>
+<span class="n">alien</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">x_position</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">alien</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">y_position</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="k">print</span><span class="p">(</span><span class="n">alien</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<p><code>{'color':'green','points':5}</code><br><code>{'color':'green','points':5,'y_position':25,'x_potion':0}</code></p>
+<hr>
+<p>Python不关心键-值对的添加顺序，只关心键和值之间的关联关系，所以键-值对的排列顺序不一定与添加顺序相同。</p>
+<h4 id="创建空字典修改与删除键-值对">创建空字典、修改与删除键-值对</h4>
+<p>为了方便，可先使用一对空的花括号定义一个空字典，再分行添加各种键-值对。使用字典来存储用户提供的数据或在编写能自动生成大量键-值对的代码时，通常都需要先定义一个空字典。</p>
+<p>要修改字典中的值，可依次指定字典名、用方括号括起的键以及与该键相关联的新值。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">alien</span> <span class="o">=</span> <span class="p">{</span><span class="p">}</span>
+<span class="n">alien</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">x_position</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">alien</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">y_position</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">alien</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">speed</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">medium</span><span class="s1">&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">Original x_position: </span><span class="s2">&#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">alien</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">x_position</span><span class="s1">&#39;</span><span class="p">]</span><span class="p">)</span><span class="p">)</span>
+<span class="c1">#向右移动外星人</span>
+<span class="c1">#根据外星人当前速度决定将其移动多远</span>
+<span class="k">if</span> <span class="n">alien</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">speed</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">slow</span><span class="s1">&#39;</span><span class="p">:</span>
+    <span class="n">x_increment</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">elif</span> <span class="n">alien</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">speed</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">medium</span><span class="s1">&#39;</span><span class="p">:</span>
+    <span class="n">x_increment</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">else</span>
+<span class="c1">#这个外星人的速度很快</span>
+    <span class="n">x_increment</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="c1">#新位置等于老位置加上增量</span>
+<span class="n">alien</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">x_position</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">alien</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">x_position</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">x_increment</span>
+<span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">New x_position: </span><span class="s2">&#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">alien</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">x_position</span><span class="s1">&#39;</span><span class="p">]</span><span class="p">)</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<p><code>Original x_position: 0</code><br><code>New x_position: 2</code></p>
+<p>删除键-值对只需要使用del语句指定字典名和要删除的键就可将字典中相应的键-值对彻底删除。</p>
+<h4 id="由类似对象组成的字典">由类似对象组成的字典</h4>
+<p>字典除了可以存储一个对象的多种信息之外，还可以用来存储众多对象的同一种信息。在定义字典时可以在输入左花括号后按回车键，再在下一行缩进四个空格，指定第一个键-值对后在它后面加上逗号，回车后文本编辑器将自动缩进以继续指定键-值对，在最后一个键-值对的下一行缩进四个空格并用右花括号结束字典定义（最后一个键—值对后面也加上逗号，为以后在下一行添加键—值对做好准备。）。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">favorite_languages</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">jen</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">python</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">sarah</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">c</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">edward</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">ruby</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">phil</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">python</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">Sarah</span><span class="s2">&#39;</span><span class="s2">s favorite language is </span><span class="s2">&#34;</span> <span class="o">+</span> <span class="n">favorite_languages</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">sarah</span><span class="s1">&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="p">)</span> <span class="o">+</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">.</span><span class="s2">&#34;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<p><code>Sarah's favorite language is C.</code></p>
+<hr>
+<h3 id="遍历字典">遍历字典</h3>
+<h4 id="遍历所有键-值对">遍历所有键-值对</h4>
+<p>使用 for 循环即可遍历字典，for循环中可声明任意变量名的两个变量用于存储键-值对中的键和值。用items()方法可返回一个键-值对列表，for循环会依次将每个键-值对存储到指定的两个变量中（遍历字典时，键-值对的返回顺序不与存储顺序相同）。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">#对于存储的是不同人的同一种信息这样的字典，遍历所有的键-值对很合适</span>
+<span class="n">user</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">username</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">efermi</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">first</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">enrico</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">last</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">fermi</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">user</span><span class="o">.</span><span class="n">items</span><span class="p">(</span><span class="p">)</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Key: </span><span class="s2">&#34;</span> <span class="o">+</span> <span class="n">key</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">Value: </span><span class="s2">&#34;</span> <span class="o">+</span> <span class="n">value</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<p><code>Key: last</code><br><code>Value: fermi</code><br><code>Key: first</code><br><code>Value: enrico</code><br><code>Key: username</code><br><code>Value: efermi</code><br></p>
+<hr>
+<h4 id="遍历所有键">遍历所有键</h4>
+<p>不需要使用字典中的值时，方法keys()可只检索字典中的键。也可以省略方法keys()，因为在遍历字典时会默认遍历所有的键。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">favorite_languages</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">jen</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">python</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">sarah</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">c</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">edward</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">ruby</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">phil</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">python</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="n">friends</span> <span class="o">=</span> <span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">phil</span><span class="s1">&#39;</span><span class="p">,</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">sarah</span><span class="s1">&#39;</span><span class="p">]</span>
+<span class="c1">#打印每个人名字，只对朋友打印特殊消息</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">favorite_languages</span><span class="o">.</span><span class="n">keys</span><span class="p">(</span><span class="p">)</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="p">)</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">friends</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">  Hi </span><span class="s2">&#34;</span> <span class="o">+</span> <span class="n">name</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="p">)</span> <span class="o">+</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">, I see your favorite language is </span><span class="s2">&#34;</span> <span class="o">+</span> <span class="n">favorite_languages</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="p">)</span> <span class="o">+</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">!</span><span class="s2">&#34;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<p><code>Edward</code><br><code>Phil</code><br><code>  Hi Phil, I see your favorite language is Python!</code><br><code>Sarah</code><br><code>  Hi Sarah, I see your favorite language is C!</code><br><code>Jen</code></p>
+<hr>
+<h4 id="按顺序遍历所有键">按顺序遍历所有键</h4>
+<p>字典明确地记录键和值之间的关联关系，但是获取字典元素时的获取顺序是不可预测的。若要以特定顺序返回元素的话，可在 for 循环中对返回的键进行排序。例如，可用函数sorted()来获得按特定顺序排列的键列表的副本。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">favorite_languages</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">jen</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">python</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">sarah</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">c</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">edward</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">ruby</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">phil</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">python</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">favorite_languages</span><span class="o">.</span><span class="n">keys</span><span class="p">(</span><span class="p">)</span><span class="p">)</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="p">)</span> <span class="o">+</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">, thank you for taking the poll.</span><span class="s2">&#34;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<p><code> Edward, thank you for taking the poll.</code><br><code> Jen, thank you for taking the poll.</code><br><code> Phil, thank you for taking the poll.</code><br><code> Sarah, thank you for taking the poll.</code><br></p>
+<hr>
+<h4 id="遍历字典中所有值">遍历字典中所有值</h4>
+<p>使用方法values()可返回一个值列表，其中不包含任何键。而若要剔除掉最终列表中大量的重复项，可使用集合（set）。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">favorite_languages</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">jen</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">python</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">sarah</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">c</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">edward</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">ruby</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">phil</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">python</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">The following languages have been mentioned:</span><span class="s2">&#34;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">language</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="n">favorite_languages</span><span class="o">.</span><span class="n">values</span><span class="p">(</span><span class="p">)</span><span class="p">)</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">language</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="p">)</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<p><code>The following languages have been mentioned:</code><br><code>Python</code><br><code>C</code><br><code>Ruby</code></p>
+<hr>
+<h3 id="嵌套">嵌套</h3>
+<p>有时需要将一系列字典存储在列表中，或将列表作为值存储在字典中，甚至字典中嵌套字典。</p>
+<h4 id="字典列表">字典列表</h4>
+<p>若一个字典包含了一个个体的各种信息，这是是无法存储第二个个体的信息的。这时可以创建一个列表，其中存储一系列字典分别对应到每个个体以此实现管理。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">aliens</span> <span class="o">=</span> <span class="p">[</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">alien_numer</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="p">:</span>
+    <span class="n">new_alien</span> <span class="o">=</span> <span class="p">{</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">color</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">green</span><span class="s1">&#39;</span><span class="p">,</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">points</span><span class="s1">&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">speed</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">slow</span><span class="s1">&#39;</span><span class="p">}</span>
+    <span class="n">aliens</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_alien</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">alien</span> <span class="ow">in</span> <span class="n">aliens</span><span class="p">[</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">alien</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">...</span><span class="s2">&#34;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">Total number of aliens: </span><span class="s2">&#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">aliens</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<p><code>'speed':'slow','color':'green','points':5</code><br><code>'speed':'slow','color':'green','points':5</code><br><code>'speed':'slow','color':'green','points':5</code><br><code>'speed':'slow','color':'green','points':5</code><br><code>'speed':'slow','color':'green','points':5</code><br><code>...</code><br><code>Total number of aliens:30</code><br></p>
+<hr>
+<h4 id="字典中存储列表">字典中存储列表</h4>
+<p>列表可以存储在字典中，每当需要在字典中将一个键关联到多个值时，都可以在字典中嵌套一个列表。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">favorite_languages</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">jen</span><span class="s1">&#39;</span><span class="p">:</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">python</span><span class="s1">&#39;</span><span class="p">,</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">ruby</span><span class="s1">&#39;</span><span class="p">]</span><span class="p">,</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">sarah</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">c</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">edward</span><span class="s1">&#39;</span><span class="p">:</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">ruby</span><span class="s1">&#39;</span><span class="p">,</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">go</span><span class="s1">&#39;</span><span class="p">]</span><span class="p">,</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">phil</span><span class="s1">&#39;</span><span class="p">:</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">python</span><span class="s1">&#39;</span><span class="p">,</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">haskell</span><span class="s1">&#39;</span><span class="p">]</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">languages</span> <span class="ow">in</span> <span class="n">favorite_languages</span><span class="o">.</span><span class="n">items</span><span class="p">(</span><span class="p">)</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span> <span class="o">+</span> <span class="n">name</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="p">)</span> <span class="o">+</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">&#39;</span><span class="s2">s favorite languages are:</span><span class="s2">&#34;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">language</span> <span class="ow">in</span> <span class="n">languages</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">language</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="p">)</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<p><code>Jen's favorite languages are:</code><br><code>    Python</code><br><code>    Ruby</code><br><code>Sarah's favorite languages are:</code><br><code>    C</code><br><code>Phil's favorite languages are:</code><br><code>    Python</code><br><code>    Haskell</code><br><code>Edward's favorite languages are:</code><br><code>    Ruby</code><br><code>    Go</code></p>
+<hr>
+<h4 id="在字典中存储字典">在字典中存储字典</h4>
+<p>字典嵌套于字典中是可行的，</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">users</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">aeinstein</span><span class="s1">&#39;</span><span class="p">:</span><span class="p">{</span>
+        <span class="sa"></span><span class="s1">&#39;</span><span class="s1">first</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">albert</span><span class="s1">&#39;</span><span class="p">,</span>
+        <span class="sa"></span><span class="s1">&#39;</span><span class="s1">last</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">einstein</span><span class="s1">&#39;</span><span class="p">,</span>
+        <span class="sa"></span><span class="s1">&#39;</span><span class="s1">location</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">princeton</span><span class="s1">&#39;</span><span class="p">,</span>
+        <span class="p">}</span><span class="p">,</span>
+    <span class="sa"></span><span class="s1">&#39;</span><span class="s1">mcurie</span><span class="s1">&#39;</span><span class="p">:</span><span class="p">{</span>
+        <span class="sa"></span><span class="s1">&#39;</span><span class="s1">first</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">marie</span><span class="s1">&#39;</span><span class="p">,</span>
+        <span class="sa"></span><span class="s1">&#39;</span><span class="s1">last</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">curie</span><span class="s1">&#39;</span><span class="p">,</span>
+        <span class="sa"></span><span class="s1">&#39;</span><span class="s1">location</span><span class="s1">&#39;</span><span class="p">:</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">paris</span><span class="s1">&#39;</span><span class="p">,</span>
+        <span class="p">}</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="k">for</span> <span class="n">username</span><span class="p">,</span> <span class="n">user_info</span> <span class="ow">in</span> <span class="n">users</span><span class="o">.</span><span class="n">items</span><span class="p">(</span><span class="p">)</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Username: </span><span class="s2">&#34;</span> <span class="o">+</span> <span class="n">username</span><span class="p">)</span>
+    <span class="n">full_name</span> <span class="o">=</span> <span class="n">user_info</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">first</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2"> </span><span class="s2">&#34;</span> <span class="o">+</span> <span class="n">user_info</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">last</span><span class="s1">&#39;</span><span class="p">]</span>
+    <span class="n">location</span> <span class="o">=</span> <span class="n">user_info</span><span class="p">[</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">location</span><span class="s1">&#39;</span><span class="p">]</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">Full name: </span><span class="s2">&#34;</span> <span class="o">+</span> <span class="n">full_name</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="p">)</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">Location: </span><span class="s2">&#34;</span> <span class="o">+</span> <span class="n">location</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="p">)</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<p><code>Username: aeinstein</code><br><code>Full name: Albert Einstein</code><br><code>Location: Princetion</code><br><code>Username: mcurie</code><br><code>Full name: Marie Curie</code><br><code>Location: Paris</code></p>
 <hr>
 
     </div>
